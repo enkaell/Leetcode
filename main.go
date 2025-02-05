@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-	mergesortedarray.merge_sorted_array()
 	fmt.Println("Success")
 }
