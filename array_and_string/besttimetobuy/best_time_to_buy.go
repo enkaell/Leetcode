@@ -59,3 +59,30 @@ func TestMaxProfit() {
 		panic("Test case 3 failed")
 	}
 }
+
+func maxProfit2(prices []int) int {
+	profit1 := 0
+	elem := prices[0]
+	for i := 0; i < len(prices); i++ {
+		if prices[i] > elem {
+			profit1 += prices[i] - elem
+		}
+		elem = prices[i]
+	}
+	return profit1
+}
+
+func TestMaxProfit2() {
+	prices := []int{7, 1, 5, 3, 6, 4}
+	if maxProfit2(prices) != 7 {
+		panic("Test case 1 failed")
+	}
+	prices = []int{7, 6, 4, 3, 1}
+	if maxProfit2(prices) != 0 {
+		panic("Test case 2 failed")
+	}
+	prices = []int{2, 4, 1}
+	if maxProfit2(prices) != 2 {
+		panic("Test case 3 failed")
+	}
+}
