@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// 121. Best Time to Buy and Sell Stock I
+
 func maxProfit(prices []int) int {
 	profit := 0
 	min := prices[0]
@@ -60,6 +62,7 @@ func TestMaxProfit() {
 	}
 }
 
+// 122. Best Time to Buy and Sell Stock II
 func maxProfit2(prices []int) int {
 	profit1 := 0
 	elem := prices[0]
